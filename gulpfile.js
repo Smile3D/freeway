@@ -36,7 +36,8 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function(){
 	return gulp.src([
-		'node_modules/parallax-js/dist/parallax.min.js'
+		'node_modules/parallax-js/dist/parallax.min.js',
+		'node_modules/wowjs/dist/wow.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -45,7 +46,7 @@ gulp.task('scripts', function(){
 
 gulp.task('css-libs', function() {
 	return gulp.src([
-		
+		'node_modules/animate.css'
 	])
 	.pipe(concat('libs.min.css'))
 	.pipe(cssnano())
