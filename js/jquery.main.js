@@ -7,6 +7,9 @@ var parallaxInstance = new Parallax(scene);
 var scene = document.getElementById('scene-2');
 var parallaxInstance = new Parallax(scene);
 
+var scene = document.getElementById('scene-3');
+var parallaxInstance = new Parallax(scene);
+
 var telInput = $("#phone"),
   errorMsg = $("#error-msg"),
   validMsg = $("#valid-msg");

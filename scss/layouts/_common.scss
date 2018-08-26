@@ -70,6 +70,8 @@ a {
 	    background: transparent;
 	    min-width: 200px;
 	    border: 1px solid #ff846e;
+	    position: relative;
+    	z-index: 99;
 
 		&:hover {
 			background: linear-gradient(to right, #ff846e 0%,#ff6b9b 100%);
@@ -100,6 +102,164 @@ h1 {
 h4 {
 	@include media('>=tablet') {
 		font-size: 16px;
+	}
+}
+
+.visual-section	{
+	padding: 92px 0 30px;
+	background: linear-gradient(135deg, #4849d1 0%,#c06cde 100%);
+
+	@include media('>=tablet') {
+		padding: 100px 0 58px;
+    	min-height: 100vh;
+	}
+
+	@include media('>=desktop') {
+		padding: 248px 0 194px;
+	}
+
+	.container {
+		@include media('>=desktop') {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.text-block {
+	    color: $white;
+	    font-size: 16px;
+	    font-weight: 500;
+	    text-align: center;
+
+	    @include media('>=tablet') {
+	    	font-size: 18px;
+	    }
+
+	    @include media('>=desktop') {
+	    	max-width: 580px;
+	    }
+
+		h1,
+		h2 {
+			color: $white;
+		}
+
+		h1 {
+			font-size: 40px;
+		    text-transform: none;
+		    margin: 0 0 4px;
+		    line-height: 1;
+
+		    @include media('>=tablet') {
+		    	font-size: 48px;
+		    }
+		}
+
+		h2 {
+			font-size: 26px;
+    		margin: 0 0 5px;
+
+    		 @include media('>=tablet') {
+			   	font-size: 34px;
+    			margin: 0px 0 24px;
+			}
+		}
+
+		p {
+			margin: 0 0 11px;
+		}
+
+		.list-bonus {
+			@extend %listreset;
+
+			margin: 0 0 15px;
+
+			@include media('>=tablet') {
+				margin: 0 0 29px;
+			}
+
+			li {
+				margin: 0 0 5px;
+				font-size: 14px;
+			    font-weight: 500;
+			    text-align: center;
+			    
+			    letter-spacing: .1px;
+			    padding-left: 20px;
+
+			    @include media('>=tablet') {
+			    	margin: 0 0 10px;
+			    	font-size: 16px;
+			    }
+
+			    &:last-child {
+			    	color: #34e9de;
+			    }
+
+			    &:before {
+			    	font-family: 'icomoon' !important;
+			    	content: "\e900";
+			    	display: inline-block;
+			    	vertical-align: middle;
+			    }
+			}
+		}
+
+		.btn {
+			min-width: 53px;
+			padding: 7px 10px 7px 10px;
+			min-height: 50px;
+			margin: 0 0 20px;
+
+			@include media('>=tablet') {
+				min-width: 260px;
+			}
+
+			@include media('>=desktop') {
+				margin: 0 0 76px;
+			}
+		}
+
+		.summary {
+			@extend %listreset;
+
+			margin: 0 -22px 15px;
+
+			li {
+			    color: #fff392;
+			    font-weight: 700;
+			    padding: 0 18px;
+			    font-size: 14px;
+			    letter-spacing: 0.1px;
+			    text-transform: uppercase;
+			    margin: 0 0 10px;
+
+			    @include media('>=tablet') {
+			    	display: inline-block;
+			    	vertical-align: middle;
+			    	margin: 0;
+			    }
+			}
+		}
+	}
+
+	.img-holder {
+		display: none;
+
+		@include media('>=tablet') {
+			display: block;
+			width: 100%;
+			height: 300px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+
+		@include media('>=desktop') {
+			display: block;
+			width: 616px;
+			height: 524px;
+		}
 	}
 }
 
@@ -983,7 +1143,11 @@ h4 {
 }
 
 .feedback {
-	padding: 117px 0 100px 0;
+	padding: 30px 0;
+
+	@include media('>=tablet') {
+		padding: 117px 0 100px 0;
+	}
 
 	.title-block {
 		margin: 0 auto 46px;
@@ -994,7 +1158,12 @@ h4 {
 		}
 
 		h2 {
-			font-size: 30px;
+			font-size: 20px;
+			color: $purple;
+
+			@include media('>=tablet') {
+				font-size: 30px;
+			}
 		}
 	}
 	.row-holder {
@@ -1088,17 +1257,7 @@ h4 {
 	    position: relative;
 	    text-align: center;
 
-		@include media('>=tablet') {
-			padding: 23px 29px 21px 0;
-			text-align: left;
-
-			&:before {
-				right: -100px;
-		    	top: -37px;
-			}
-		}
-
-		&:before {
+	    &:before {
 			content: '';
 		    position: absolute;
 		    right: 24px;
@@ -1107,6 +1266,16 @@ h4 {
 		    width: 242px;
 		    height: 240px;
 		    opacity: .1;
+		}
+
+		@include media('>=tablet') {
+			padding: 23px 29px 21px 0;
+			text-align: left;
+
+			&:before {
+		      	right: -80px;
+    			top: -28px;
+			}
 		}
 
 		img {
@@ -1158,7 +1327,15 @@ h4 {
 .paralax-element-7,
 .paralax-element-8,
 .paralax-element-9,
-.paralax-element-10 {
+.paralax-element-10,
+.paralax-element-11,
+.paralax-element-12,
+.paralax-element-13,
+.paralax-element-14,
+.paralax-element-15,
+.paralax-element-16
+.paralax-element-17
+.paralax-element-18 {
 	position: absolute;
 	display: none !important;
 
@@ -1220,6 +1397,52 @@ h4 {
 	left: auto !important;
 	right: 236px !important;
 	top: 529px !important;
+}
+
+.paralax-element-11 {
+	left: auto !important;
+	right: -374px !important;
+    top: -672px !important;
+}
+
+.paralax-element-12 {
+	left: auto !important;
+    right: 433px !important;
+    top: -174px !important;
+}
+
+.paralax-element-13 {
+	left: 349px !important;
+    top: -329px !important;
+}
+
+.paralax-element-14 {
+	left: 434px !important;
+    top: -183px !important;
+}
+
+.paralax-element-15 {
+	right: 372px !important;
+    left: auto !important;
+    top: -684px !important;
+}
+
+.paralax-element-16 {
+	right: 462px !important;
+    left: auto !important;
+    top: -511px !important;
+}
+
+.paralax-element-17 {
+	right: 371px !important;
+    left: auto !important;
+    top: -327px !important;
+}
+
+.paralax-element-18 {
+	right: auto !important;
+    left: 465px !important;
+    top: -461px !important;
 }
 
 .parallax-img {
@@ -1292,7 +1515,6 @@ h4 {
 }
 
 .form {
-
 	@include media('>=tablet') {
 		max-width: 400px;
 	}
