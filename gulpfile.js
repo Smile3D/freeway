@@ -67,7 +67,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('build', ['clean','img', 'styles'], function() {
 	var buildCSS = gulp.src([
-		'css/main.css',
+		'css/*.css',
 		'css/libs.min.css'
 	])
 		.pipe(cssbeautify())
