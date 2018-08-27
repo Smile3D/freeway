@@ -556,10 +556,10 @@
 							<div class="title-block">
 								<h3>ЗАПОЛНИТЕ ФОРМУ,<br>ЧТОБЫ ЗАБРОНИРОВАТЬ МЕСТО</h3>
 							</div>
-							<form action="#" method="post" class="form">
-								<input type="text" name="Name" placeholder="Введите имя">
-								<input type="email" name="Email" placeholder="Введите Email" >
-								<input type="tel" id="phone" name="Phone" placeholder="Введите телефон">
+							<form action="mail.php" method="post" class="form">
+								<input type="text" name="Name" placeholder="Введите имя" required>
+								<input type="email" name="Email" placeholder="Введите Email" required>
+								<input type="tel" id="phone" name="Phone" placeholder="Введите телефон" required>
 								<div class="label-wrapper nice-form">
 									<label for="check-1">
 									<input id="check-1" type="checkbox">
@@ -568,6 +568,7 @@
 								</div>
 								<div class="btn-holder">
 									<button type="submit" class="btn"><span class="text-btn">Подать заявку</span></button>
+									<span class="success-message">Thank You!</span>
 							</form>
 						</div>
 					</div>
