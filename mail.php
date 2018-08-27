@@ -1,35 +1,35 @@
 <?php
-	//****************************************
-	//edit here
-	$senderName = 'Freeway';
-	$senderEmail = 'site@example.com';
-	$targetEmail = 'Aleks140988@gmail.com';
-	$messageSubject = 'Заявка на участие';
-	$redirectToReferer = true;
-	$redirectURL = 'thankyou.html';
-	//****************************************
 
-	// mail content
-	$name = $_POST['Name'];
-	$email = $_POST['Email'];
-	$phone = $_POST['Phone'];
 
-	// prepare message text
-	$messageText =	'Имя: '.$name."\n".
-					'Email: '.$email."\n".
-					'Телефон: '.$phone."\n";
+$name = htmlspecialchars($_POST['Name']);
+$email = htmlspecialchars($_POST['Email']);
+$tel = htmlspecialchars($_POST["Phone"]);
+$redirectToReferer = true;
+$redirectURL = 'thankyou.html';
+// От кого 
+$senderEmail = "test_mail@freeway.zzz.com.ua"; // указываем почту хостинга
 
-	// send email
-	$senderName = "=?UTF-8?B?" . base64_encode($senderName) . "?=";
-	$messageSubject = "=?UTF-8?B?" . base64_encode($messageSubject) . "?=";
-	$messageHeaders = "From: " . $senderName . " <" . $senderEmail . ">\r\n"
-				. "MIME-Version: 1.0" . "\r\n"
-				. "Content-type: text/plain; charset=UTF-8" . "\r\n";
 
-	if (preg_match('/^[_.0-9a-z-]+@([0-9a-z][0-9a-z-]+.)+[a-z]{2,4}$/',$targetEmail,$matches))
-	mail($targetEmail, $messageSubject, $messageText, $messageHeaders, $targetEmail);
+// Куда 
+$targetEmail = "some mail"; 
 
-	// redirect
+// Тема
+$subject ="Заявка с сайта";
+
+// Заголовок сообщения
+$headers = "From: $senderEmail\r\n";
+$headers.= "Reply-To: $senderEmail\r\n";
+$headers.= "MIME-Version: 1.0\r\n".
+$headers.= "Content-type: text/html; charset=utf-8\r\n".
+$headers.= "X-Mailer: PHP/" . phpversion();
+
+$message =	'Имя: '.$name."\n".
+			'Email: '.$email."\n".
+			'Телефон: '.$tel."\n";
+
+mail($targetEmail, $subject, $message, $headers);
+
+// redirect
 	if($redirectToReferer) {
 		header("Location: ".@$_SERVER['HTTP_REFERER'].'#sent');
 	} else {
