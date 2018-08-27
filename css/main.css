@@ -877,7 +877,7 @@ h1 {
       padding: 39px 0; } }
   @media (min-width: 1024px) {
     .result {
-      padding: 39px 0 100px; } }
+      padding: 39px 0 120px; } }
   .result .title-block {
     margin-bottom: 30px; }
     @media (min-width: 768px) {
@@ -941,7 +941,7 @@ h1 {
     padding: 10px 0; }
     @media (min-width: 768px) {
       .result .box-holder .box-wrapper {
-        padding: 12px 14px;
+        padding: 12px 14px 13px 14px;
         width: 50%; } }
     @media (min-width: 1024px) {
       .result .box-holder .box-wrapper {
@@ -1037,9 +1037,9 @@ h1 {
     .description {
       padding: 110px 0 119px; } }
   .description .title-block {
-    margin: 0 0 78px; }
+    margin: 0 0 80px; }
     .description .title-block h1 {
-      margin: 0 0 5px; }
+      margin: 0 0 3px; }
     .description .title-block h2 {
       font-size: 20px;
       line-height: 1;
@@ -1058,17 +1058,17 @@ h1 {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      -webkit-box-pack: space-beetwen;
-      -webkit-justify-content: space-beetwen;
-          -ms-flex-pack: space-beetwen;
-              justify-content: space-beetwen;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       margin: 0 -15px; } }
   .description .item-holder .title-block-item {
     -webkit-border-radius: 5px;
             border-radius: 5px;
     max-width: 250px;
-    padding: 12px 11px;
-    margin: -48px auto 0;
+    padding: 12px 6px 11px 8px;
+    margin: -48px 40px 19px;
     position: relative;
     overflow: hidden; }
     .description .item-holder .title-block-item:before {
@@ -1092,11 +1092,11 @@ h1 {
       font-size: 12px; }
       @media (min-width: 1024px) {
         .description .item-holder .title-block-item h4 {
-          font-size: 14px; } }
+          font-size: 16px; } }
     .description .item-holder .title-block-item.blue {
-      background: -webkit-linear-gradient(45deg, #0000e0 0%, #c36fe0 100%);
-      background: -o-linear-gradient(45deg, #0000e0 0%, #c36fe0 100%);
-      background: linear-gradient(45deg, #0000e0 0%, #c36fe0 100%); }
+      background: -webkit-linear-gradient(45deg, #1e5799 0%, #6b53d5 0%, #c26cdf 100%);
+      background: -o-linear-gradient(45deg, #1e5799 0%, #6b53d5 0%, #c26cdf 100%);
+      background: linear-gradient(45deg, #1e5799 0%, #6b53d5 0%, #c26cdf 100%); }
     .description .item-holder .title-block-item.light-blue {
       background: -webkit-linear-gradient(45deg, #249bca 0%, #4ed6c9 100%);
       background: -o-linear-gradient(45deg, #249bca 0%, #4ed6c9 100%);
@@ -1120,10 +1120,11 @@ h1 {
     color: #687e89;
     background-color: #fff;
     text-align: center;
-    padding: 23px 11px 11px 24px;
+    padding: 23px 23px 9px 25px;
     font-size: 15px;
     -webkit-border-radius: 5px;
-            border-radius: 5px; }
+            border-radius: 5px;
+    line-height: 23px; }
     .description .item-holder .item a {
       color: #ff846e;
       text-decoration: none; }

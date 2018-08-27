@@ -41,6 +41,8 @@
 					</div>
 					<div data-wow-duration="1.1s" class="img-holder wow slideInRight" style="background-image: url(images/img-01.png);"></div>
 				</div>
+				<span class="shadow-1"></span>
+				<span class="shadow-2"></span>
 			</section>
 			<section class="about-course viewport-section">
 				<div class="container">
@@ -81,7 +83,7 @@
 					<ul class="course-progress">
 						<li data-wow-duration="4s" class="wow slideInLeft">
 							<strong class="number">8</strong>
-							<p>Полноценных блоков</p>fadeIn
+							<p>Полноценных блоков</p>
 						</li>
 						<li data-wow-duration="3s" class="wow slideInLeft">
 							<strong class="number">32</strong>
@@ -555,9 +557,9 @@
 								<h3>ЗАПОЛНИТЕ ФОРМУ,<br>ЧТОБЫ ЗАБРОНИРОВАТЬ МЕСТО</h3>
 							</div>
 							<form action="mail.php" method="post" class="form">
-								<input type="text" name="Name" placeholder="Введите имя">
-								<input type="email" name="Email" placeholder="Введите Email">
-								<input type="tel" id="phone" name="Phone" placeholder="Введите телефон">
+								<input type="text" name="Name" placeholder="Введите имя" required>
+								<input type="email" name="Email" placeholder="Введите Email" required>
+								<input type="tel" id="phone" name="Phone" placeholder="Введите телефон" required>
 								<div class="label-wrapper nice-form">
 									<label for="check-1">
 									<input id="check-1" type="checkbox">
@@ -566,12 +568,7 @@
 								</div>
 								<div class="btn-holder">
 									<button type="submit" class="btn"><span class="text-btn">Подать заявку</span></button>
-								<div class="message-block">
-									<div class="message-holder">
-										<h1>Thank you!</h1>
-									</div>
-									<a href="#" class="close"></a>
-								</div>
+									<span class="success-message">Thank You!</span>
 							</form>
 						</div>
 					</div>

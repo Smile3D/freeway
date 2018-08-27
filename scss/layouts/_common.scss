@@ -385,7 +385,7 @@ h4 {
 	}
 
 	@include media('>=desktop') {
-		padding: 39px 0 100px;
+		padding: 39px 0 120px;
 	}
 
 	.title-block {
@@ -457,7 +457,7 @@ h4 {
 			padding: 10px 0;
 
 			@include media('>=tablet') {
-				padding: 12px 14px;
+				padding: 12px 14px 13px 14px;
 				width: 50%;
 			}
 
@@ -574,10 +574,10 @@ h4 {
 	}
 
 	.title-block {
-		margin: 0 0 78px;
+		margin: 0 0 80px;
 
 		h1 {
-			margin: 0 0 5px;
+			margin: 0 0 3px;
 		}
 
 		h2 {
@@ -597,17 +597,17 @@ h4 {
 		@include media('>=tablet') {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-beetwen;
+			justify-content: space-between;
 			margin: 0 -15px;
 		}
 
 		.title-block-item {
 			border-radius: 5px;
 			max-width: 250px;
-			padding: 12px 11px;
-			margin: -48px auto 0;
-			position: relative;
-			overflow: hidden;
+		    padding: 12px 6px 11px 8px;
+		    margin: -48px 40px 19px;
+		    position: relative;
+		    overflow: hidden;
 
 			&:before {
 				content: '';
@@ -631,12 +631,12 @@ h4 {
 				font-size: 12px;
 
 				@include media('>=desktop') {
-					font-size: 14px;
+					font-size: 16px;
 				}
 			}
 
 			&.blue {
-				background: linear-gradient(45deg, #0000e0 0%,#c36fe0 100%);
+				background: linear-gradient(45deg, rgba(30,87,153,1) 0%,rgba(107,83,213,1) 0%,rgba(194,108,223,1) 100%);
 			}
 
 			&.light-blue {
@@ -667,9 +667,10 @@ h4 {
 			color: #687e89;
 			background-color: $white;
 			text-align: center;
-			padding: 23px 11px 11px 24px;
-			font-size: 15px;
-			border-radius: 5px;
+		   	padding: 23px 23px 9px 25px;
+		    font-size: 15px;
+		    border-radius: 5px;
+		    line-height: 23px;
 
 			a {
 				color: $orange;

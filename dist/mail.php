@@ -3,7 +3,7 @@
 	//edit here
 	$senderName = 'Freeway';
 	$senderEmail = 'site@example.com';
-	$targetEmail = 'Aleks140988@gmail.com';
+	$targetEmail = 'admin@example.com';
 	$messageSubject = 'Заявка на участие';
 	$redirectToReferer = true;
 	$redirectURL = 'thankyou.html';
