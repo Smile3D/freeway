@@ -282,17 +282,26 @@ h4 {
 	}
 
 	.shadow-1 {
-		&:after {
+		&:after,
+		&:before {
 			content: "";
 		    position: absolute;
-		    width: 700px;
-		    height: 500px;
-		    bottom: -250px;
-		    left: 50%;
-		    top: 0;
+		    width: 1000px;
+		    height: 1000px;
+		    display: block;
 		    z-index: 99999;
 		    transform: translateX(-50%);
-		    background-image: url(../images/decor-light.png);
+		    background: radial-gradient(ellipse at center, rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 70%);
+		}
+
+		&:after {
+		    right: -29%;
+		    top: -500px;
+		}
+
+		&:before {
+		    left: 24%;
+		    bottom: -500px;
 		}
 	}
 }

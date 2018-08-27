@@ -787,19 +787,25 @@ h1 {
         display: block;
         width: 616px;
         height: 524px; } }
-  .visual-section .shadow-1:after {
+  .visual-section .shadow-1:after, .visual-section .shadow-1:before {
     content: "";
     position: absolute;
-    width: 700px;
-    height: 500px;
-    bottom: -250px;
-    left: 50%;
-    top: 0;
+    width: 1000px;
+    height: 1000px;
+    display: block;
     z-index: 99999;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    background-image: url(../images/decor-light.png); }
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    background: -o-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%); }
+  .visual-section .shadow-1:after {
+    right: -29%;
+    top: -500px; }
+  .visual-section .shadow-1:before {
+    left: 24%;
+    bottom: -500px; }
 
 .about-course {
   padding: 15px 0; }
