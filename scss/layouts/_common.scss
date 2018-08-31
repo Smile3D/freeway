@@ -225,7 +225,6 @@ h4 {
 		}
 
 		.btn {
-			min-width: 53px;
 			padding: 7px 10px 7px 10px;
 			min-height: 50px;
 			margin: 0 0 20px;
@@ -476,7 +475,7 @@ h4 {
 				content: '';
 				position: absolute;
 				top: -181px;
-				left: -11px;
+				left: 0;
 				right: 0;
 				background-image: url(../images/decor-sky.png);
 				background-size: contain;
@@ -555,8 +554,6 @@ h4 {
 
 			img {
 				margin: 0 0 63px;
-				width: 70px;
-				height: 70px;
 			}
 
 			p {
@@ -612,7 +609,7 @@ h4 {
 			border-radius: 5px;
 			max-width: 250px;
 			padding: 12px 6px 11px 8px;
-			margin: -48px 40px 19px;
+			margin: -48px auto 19px;
 			position: relative;
 			overflow: hidden;
 
@@ -1212,13 +1209,14 @@ h4 {
 			left: 10%;
 
 			&:before {
-				right: auto;
-				left: 15px;
-				top: 37px;
-				height: 2px;
-				width: 12px;
-				z-index: 1;
-				background: linear-gradient(to bottom, #4ad1c5 0%,#2097c6 100%);
+				content: "\e900";
+			    font-family: 'icomoon' !important;
+			    right: auto;
+			    left: 15px;
+			    top: 24px;
+			    z-index: 1;
+			    font-size: 19px;
+			    color: #4ad1c6;
 			}
 
 			&:after {
@@ -1244,6 +1242,7 @@ h4 {
 		position: relative;
 		max-width: 1200px;
 		margin: 0 auto;
+
 
 		@include media('>=tablet') {
 			display: none;
@@ -1583,7 +1582,7 @@ h4 {
 	}
 
 	.row-feedback {
-		padding: 15px 15px 21px 15px;
+		padding: 15px;
 		background: linear-gradient(135deg, #38446c 0%, #913ac3 100%);
 		overflow: hidden;
 		border-radius: 15px;
@@ -1591,6 +1590,14 @@ h4 {
 		flex-wrap: wrap;
 		position: relative;
 		text-align: center;
+
+		@include media('>=phone') {
+			padding: 15px;
+		}
+
+		@include media('>=tablet') {
+			padding: 15px 15px 21px 15px;
+		}
 
 		&:before {
 			content: '';
@@ -1616,6 +1623,10 @@ h4 {
 		img {
 			margin: 0 auto 20px;
 			display: block;
+
+			@include media('>=phone') {
+				margin: 0 auto;
+			}
 
 			@include media('>=tablet') {
 				margin: -23px 29px -21px 0;

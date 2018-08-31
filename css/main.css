@@ -746,7 +746,6 @@ h1 {
           display: inline-block;
           vertical-align: middle; }
     .visual-section .text-block .btn {
-      min-width: 53px;
       padding: 7px 10px 7px 10px;
       min-height: 50px;
       margin: 0 0 20px; }
@@ -956,7 +955,7 @@ h1 {
       content: '';
       position: absolute;
       top: -181px;
-      left: -11px;
+      left: 0;
       right: 0;
       background-image: url(../images/decor-sky.png);
       -webkit-background-size: contain;
@@ -1026,9 +1025,7 @@ h1 {
       background: -o-linear-gradient(315deg, #e2c150 0%, #e29d3d 30%, #ec6952 100%);
       background: linear-gradient(135deg, #e2c150 0%, #e29d3d 30%, #ec6952 100%); }
     .result .box-holder .box img {
-      margin: 0 0 63px;
-      width: 70px;
-      height: 70px; }
+      margin: 0 0 63px; }
     .result .box-holder .box p {
       margin: 0 0 19px; }
     .result .box-holder .box .arrow {
@@ -1074,7 +1071,7 @@ h1 {
             border-radius: 5px;
     max-width: 250px;
     padding: 12px 6px 11px 8px;
-    margin: -48px 40px 19px;
+    margin: -48px auto 19px;
     position: relative;
     overflow: hidden; }
     .description .item-holder .title-block-item:before {
@@ -1580,16 +1577,14 @@ h1 {
     .choose-job .timeline-right .right {
       left: 10%; }
       .choose-job .timeline-right .right:before {
+        content: "\e900";
+        font-family: 'icomoon' !important;
         right: auto;
         left: 15px;
-        top: 37px;
-        height: 2px;
-        width: 12px;
+        top: 24px;
         z-index: 1;
-        background: -webkit-gradient(linear, left top, left bottom, from(#4ad1c5), to(#2097c6));
-        background: -webkit-linear-gradient(top, #4ad1c5 0%, #2097c6 100%);
-        background: -o-linear-gradient(top, #4ad1c5 0%, #2097c6 100%);
-        background: linear-gradient(to bottom, #4ad1c5 0%, #2097c6 100%); }
+        font-size: 19px;
+        color: #4ad1c6; }
       .choose-job .timeline-right .right:after {
         left: -1px; }
     .choose-job .timeline-right .content-right {
@@ -1892,7 +1887,7 @@ h1 {
       background: -o-linear-gradient(315deg, #38456c 0%, #9e3dd7 100%);
       background: linear-gradient(135deg, #38456c 0%, #9e3dd7 100%); }
   .feedback .row-feedback {
-    padding: 15px 15px 21px 15px;
+    padding: 15px;
     background: -webkit-linear-gradient(315deg, #38446c 0%, #913ac3 100%);
     background: -o-linear-gradient(315deg, #38446c 0%, #913ac3 100%);
     background: linear-gradient(135deg, #38446c 0%, #913ac3 100%);
@@ -1908,6 +1903,12 @@ h1 {
             flex-wrap: wrap;
     position: relative;
     text-align: center; }
+    @media (min-width: 480px) {
+      .feedback .row-feedback {
+        padding: 15px; } }
+    @media (min-width: 768px) {
+      .feedback .row-feedback {
+        padding: 15px 15px 21px 15px; } }
     .feedback .row-feedback:before {
       content: '';
       position: absolute;
@@ -1927,6 +1928,9 @@ h1 {
     .feedback .row-feedback img {
       margin: 0 auto 20px;
       display: block; }
+      @media (min-width: 480px) {
+        .feedback .row-feedback img {
+          margin: 0 auto; } }
       @media (min-width: 768px) {
         .feedback .row-feedback img {
           margin: -23px 29px -21px 0; } }
